@@ -286,7 +286,9 @@ as_tls_cleanup(void)
 
 	// https://wiki.openssl.org/index.php/Library_Initialization#Cleanup
 	//
-	FIPS_mode_set(0);
+	// was removed from openssl 3.0.0
+	//
+	// FIPS_mode_set(0);
 	ENGINE_cleanup();
 	CONF_modules_unload(1);
 	EVP_cleanup();
